@@ -10,15 +10,16 @@
 </head>
 <body>
     <div class="container">
+      <!-- Photo Uploading Section Start -->
         <h1>Photo Gallery</h1>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
           <input type="text" name="title" placeholder="Photo title" required>
           <input type="file" name="image" accept="image/*"required>
           <button type="submit">Upload</button>
 
         </form>
         <hr>
-
+<!-- Photo Gallery Section Start -->
         <div>
             <!-- Photo Details -->
             <?php
@@ -37,7 +38,7 @@
               <?php
                endwhile;
             else:
-                echo "No photos uploaded yet. ";
+                echo "No photos uploaded yet! ";
             endif;
             ?>
               

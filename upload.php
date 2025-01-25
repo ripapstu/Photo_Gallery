@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $title = $_POST['title'];
     $image = $_FILES['image'];
 
+//Check if the image uploaded
     if(isset($image) && $image['tmp_name']!== ""){
        $uploadDir = 'uploads/';
        $filePath = $uploadDir . basename($image['name']);
@@ -16,11 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
               header('Location: index.php');
               exit;
 
-         } else {
+         }else{
               echo "Failed to upload file.";      
          }
 
-        } else {
+        }else{
             echo "Please select a file to upload.";
  }
 }

@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD']==="POST"){
 
      $id = intval($_POST['id']);
 
-     //Getting the image from by ID
+     //Getting the image from DB by ID
      $result=$conn->query("SELECT image_path FROM photos WHERE id = $id");
 
 
